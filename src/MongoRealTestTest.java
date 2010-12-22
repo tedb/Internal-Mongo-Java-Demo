@@ -11,7 +11,7 @@ public class MongoRealTestTest {
   public void setUp() throws UnknownHostException {
     Mongo m = new Mongo();
     
-    this.customerCollection = m.getDB("mydb").getCollection("customers");
+    this.customerCollection = m.getDB("mydb").getCollection("customers_test");
     customerCollection.setObjectClass(Customer.class);
   }
 

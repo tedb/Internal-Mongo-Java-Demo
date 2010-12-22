@@ -8,15 +8,15 @@ public class MongoTest {
       Mongo mongo = new Mongo("localhost");
     
       DB db = mongo.getDB( "mydb" );
-			DBCollection collection = db.getCollection("people");
-			
-			String[] s = {
+      DBCollection collection = db.getCollection("people");
+      
+      String[] s = {
                     "name", "Ted",
                     "address", "123 foo st"
                    };
-			
+      
       BasicDBObject doc = BetterDBObject.newFromArray( s );
-			collection.insert(doc);
+      collection.insert(doc);
       
     } catch (Exception ex) {
       ex.printStackTrace();
